@@ -101,7 +101,7 @@ def insert_Task() -> toDo_Task:
         try:
             month = int(input("\nENTER MONTH OF EVENT/TASK IN NUMERIC FORM:\n>>>"))
             day = int(input("\nENTER DAY OF EVENT/TASK IN NUMERIC FORM:\n>>>"))
-            year = int(input("\nENTER YEAR OF EVENT/TASK IN NUMERIC FORM:\n>>>"))
+            year = float(input("\nENTER YEAR OF EVENT/TASK IN NUMERIC FORM:\n>>>"))
             date = datetime.date(month, day, year)
             check = re.search("[a-zA-Z]", date)
 
