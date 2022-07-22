@@ -119,7 +119,7 @@ def insert_Task() -> toDo_Task:
 
     
     if userInput == "1":
-        toDo = userEntry(event, date, priority)
+        toDo = userEntry(event, month, day, year, priority)
     else:
         toDo = None
 
