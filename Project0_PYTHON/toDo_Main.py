@@ -103,10 +103,6 @@ def insert_Task() -> toDo_Task:
             day = int(input("\nENTER DAY OF EVENT/TASK IN NUMERIC FORM:\n>>>"))
             year = int(input("\nENTER YEAR OF EVENT/TASK IN NUMERIC FORM:\n>>>"))
             date = datetime.date(month, day, year)
-            check = re.search("[a-zA-Z]", month, day, year)
-
-            if check != None:
-                raise ValueError
         except ValueError as ve:
             print("\nNOT A PROPER INTEGER, PLEASE TRY AGAIN:\n")
             logging.error("Either entered a string character or a comma. Trying again....")
