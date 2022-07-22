@@ -76,7 +76,7 @@ def insert_Task() -> toDo_Task:
 
     print("\nPlease select your entry for your to-do list:")
     print("\t1) userEntry")
-    print("\t2 exit")
+    print("\t2) exit")
     userInput = input(">>>> ")
 
     if userInput not in ["1"]:
