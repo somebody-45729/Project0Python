@@ -42,7 +42,7 @@ def save_Task(csvName, lst_toDo):
     with open(csvName, "w") as f:
         for toDo in lst_toDo:
             if type(toDo) == userEntry:
-                f.write("Task, " + toDo._task + "," + "Month: " + int(toDo._month) + "," + "Day:  " + int(toDo._day) + "," + "Year: " + int(toDo._year) + "," + toDo._priority + ",\n")
+                f.write("Task, " + toDo._task + "," + "Month: " + toDo._month + "," + "Day:  " + toDo._day + "," + "Year: " + toDo._year + "," + toDo._priority + ",\n")
             else:
                 pass
 
