@@ -14,7 +14,7 @@ def main():
 
     print("******** TO-DO LIST ********")
     
-    csvName = "list.csv"
+    csvName = "toDo_Items.csv"
     lst_toDo = []
     lst_toDo = load_Task(csvName)
     logging.info("Loading tasks into the list....")
