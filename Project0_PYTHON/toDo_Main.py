@@ -103,7 +103,7 @@ def insert_Task() -> toDo_Task:
             day = str(input("\nENTER DAY OF EVENT/TASK IN NUMERIC FORM:\n>>>"))
             year = str(input("\nENTER YEAR OF EVENT/TASK IN NUMERIC FORM:\n>>>"))
             date = datetime.date(month, day, year)
-            check = re.search("[a-zA-Z].+ ',' ", date)
+            check = re.search("[a-zA-Z].+ ',' ", month, day, year)
 
             if check != None:
                 raise ValueError
