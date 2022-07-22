@@ -1,7 +1,7 @@
 import re
 import logging
 import sys
-from datetime import datetime
+import datetime
 import csv
 
 from toDo_Extra import toDo_Task, userEntry
