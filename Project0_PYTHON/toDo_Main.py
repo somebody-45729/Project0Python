@@ -117,6 +117,8 @@ def insert_Task() -> toDo_Task:
             raise Exception("USER DID NOT ENTER high, medium, or low as input!")
         else:
         '''
+            
+        break
 
     
     if userInput == "1":
