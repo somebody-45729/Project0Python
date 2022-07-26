@@ -117,16 +117,6 @@ def insert_Task() -> toDo_Task:
             raise Exception("USER DID NOT ENTER high, medium, or low as input!")
         else:
         '''
-        if priority == "low":
-            return priority
-        elif priority == "medium":
-            return priority
-        elif priority == "high":
-            return priority
-        else:
-            print("PLEASE ENTER THE FOLLOWING 3 OPTIONS: low, medium, or high")
-            
-        break
 
     
     if userInput == "1":
