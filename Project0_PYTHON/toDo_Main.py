@@ -42,7 +42,7 @@ def save_Task(csvName, lst_toDo):
     with open(csvName, "w") as f:
         for toDo in lst_toDo:
             if type(toDo) == userEntry:
-                f.write("LISTED INFO ON EVENT/TASK: " + str(toDo._task) + ", " + "Month: " + str(toDo._month) + ", " + "Day: " + str(toDo._day) + ", " + "Year: " + str(toDo._year) + ", " + "Priorty: " + ", " + toDo._priority + ",\n")
+                f.write("LISTED INFO ON EVENT/TASK: " + str(toDo._task) + ", " + "Month: " + str(toDo._month) + ", " + "Day: " + str(toDo._day) + ", " + "Year: " + str(toDo._year) + ", " + "Priorty: " + toDo._priority)
             else:
                 pass
 
@@ -63,7 +63,7 @@ def load_Task(csvName):
 
             if toDo != None:
                 lst_toDo.append(toDo)
-    return lst_toDo
+        return lst_toDo
 
 def insert_Task() -> toDo_Task:
     '''
@@ -111,12 +111,21 @@ def insert_Task() -> toDo_Task:
 
     while True:
         # Now priorties: LOW, MEDIUM, or HIGH
-        priority = input("\nIS THE PRIORITY OF EVENT/TASK LOW, MEDIUM, or HIGH:\n>>>")
+        priority = input("\nIS THE PRIORITY OF EVENT/TASK LOW, MEDIUM, or HIGH:\n>>>").lower()
         '''
         if priority.lower() != "low" or "medium" or "high":
             raise Exception("USER DID NOT ENTER high, medium, or low as input!")
         else:
         '''
+        if priority == "low":
+            return priority
+        elif priority == "medium":
+            return priority
+        elif priority == "high":
+            return priority
+        else:
+            print("PLEASE ENTER THE FOLLOWING 3 OPTIONS: low, medium, or high")
+            
         break
 
     
