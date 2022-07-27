@@ -1,8 +1,7 @@
 # Extra class/module handler here
 
-from abc import ABC, abstractmethod
 
-class toDo_Task(ABC):
+class toDo_Task():
     def __init__(self, task, month, day, year, priority):
         self._task = str(task)
         self._month = int(month)
@@ -15,8 +14,6 @@ class toDo_Task(ABC):
 
     def getName(self):
         return self._task
-
-    @abstractmethod
 
     def __str__(self):
             return "Task: " + self._task + ", Month: " + str(self._month) + ", Day: " + str(self._day) + ", Year: " + str(self._year) + ", Priority: " + self._priority
