@@ -10,9 +10,15 @@ class toDo_Task(ABC):
         self._year = int(year)
         self._priority = str(priority)
 
-        @abstractmethod
+    def setTask(self, task):
+        self._task = str(task)
 
-        def __str__(self):
+    def getName(self):
+        return self._task
+
+    @abstractmethod
+
+    def __str__(self):
             return "Task: " + self._task + ", Month: " + str(self._month) + ", Day: " + str(self._day) + ", Year: " + str(self._year) + ", Priority: " + self._priority
 
 class userEntry(toDo_Task):
