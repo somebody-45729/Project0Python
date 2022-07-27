@@ -48,7 +48,7 @@ def save_Task(csvName, lst_toDo):
                 pass
 
 
-def load_Task(csvName):
+def load_Task(csvName) -> list:
     '''
     Load into the list, return the list
     '''
