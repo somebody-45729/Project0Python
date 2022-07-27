@@ -58,7 +58,7 @@ def load_Task(csvName):
         for row in f:
             infoLine = row.split(',')
             if infoLine[0] == "userEntry":
-                toDo = userEntry(infoLine[1], infoLine[2], infoLine[3], infoLine[4], infoLine[5], infoLine[6])
+                toDo = userEntry(infoLine[1], infoLine[2], infoLine[3], infoLine[4])
             else:
                 toDo = None
 
