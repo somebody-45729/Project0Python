@@ -56,9 +56,9 @@ def load_Task(csvName) -> list:
 
     with open(csvName, "r") as f:
         for row in f:
-            infoLine = row.split(',')
-            if infoLine[0] == "userEntry":
-                toDo = userEntry(infoLine[1], infoLine[2], infoLine[3], infoLine[4])
+            info = row.split(',')
+            if info[0] == "userEntry":
+                toDo = userEntry(info[1], info[2], info[3], info[4])
             else:
                 toDo = None
 
