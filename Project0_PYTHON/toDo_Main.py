@@ -58,12 +58,13 @@ def load_Task(csvName):
         for row in f:
             infoLine = row.split(',')
             if infoLine[0] == "userEntry":
-                toDo = userEntry(infoLine[1], infoLine[2], infoLine[3], infoLine[4], infoLine[5])
+                toDo = userEntry(infoLine[1], infoLine[2], infoLine[3], infoLine[4], infoLine[5], infoLine[6])
             else:
                 toDo = None
 
             if toDo != None:
                 lst_toDo.append(toDo)
+
         return lst_toDo
 
 def insert_Task() -> toDo_Task:
