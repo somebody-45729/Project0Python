@@ -41,7 +41,7 @@ def save_Task(csvName, lst_toDo):
     '''
     with open(csvName, "w") as f:
         for toDo in lst_toDo:
-            if type(toDo):
+            if type(toDo) == userEntry:
                 f.write("LISTED INFO ON EVENT/TASK: " + str(toDo._task) + ", " + "Month: " + str(toDo._month) + ", " + "Day: " + str(toDo._day) + ", " + "Year: " 
                         + str(toDo._year) + ", " + "Priorty: " + toDo._priority + ",\n")
             else:
