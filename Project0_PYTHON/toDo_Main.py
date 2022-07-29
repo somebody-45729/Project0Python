@@ -99,10 +99,9 @@ def insert_Task() -> toDo_Task:
             break
 
     while True:
-        # Enter the date relevant to the task/event
+        # Enter the MONTH
         try:
             month = int(input("\nENTER MONTH OF EVENT/TASK IN NUMERIC FORM:\n>>>"))
-           # date = datetime.date(month, day, year)
         except ValueError as ve:
             print("\nNOT A PROPER INTEGER, PLEASE TRY AGAIN:\n")
             logging.error("Either entered a string character or a comma. Trying again....")
@@ -110,10 +109,9 @@ def insert_Task() -> toDo_Task:
             break
 
     while True:
-        # Enter the date relevant to the task/event
+        # Enter the DAY
         try:
             day = int(input("\nENTER DAY OF EVENT/TASK IN NUMERIC FORM:\n>>>"))
-           # date = datetime.date(month, day, year)
         except ValueError as ve:
             print("\nNOT A PROPER INTEGER, PLEASE TRY AGAIN:\n")
             logging.error("Either entered a string character or a comma. Trying again....")
@@ -121,10 +119,10 @@ def insert_Task() -> toDo_Task:
             break
 
     while True:
-        # Enter the date relevant to the task/event
+        # Enter the YEAR
         try:
-            year = int(input("\nENTER YEAR OF EVENT/TASK IN NUMERIC FORM:\n>>>"))
-           # date = datetime.date(month, day, year)
+            while len(year) == 4:
+                year = int(input("\nENTER YEAR OF EVENT/TASK IN NUMERIC FORM:\n>>>"))    
         except ValueError as ve:
             print("\nNOT A PROPER INTEGER, PLEASE TRY AGAIN:\n")
             logging.error("Either entered a string character or a comma. Trying again....")
