@@ -133,10 +133,16 @@ def insert_Task() -> toDo_Task:
             logging.error("Either entered a string character or a comma. Trying again....")
         else:
             break
-
+    
+    pri_lst = ["low", "medium", "high"]
     while True:
         # Now priorties: LOW, MEDIUM, or HIGH
-        priority = input("\nIS THE PRIORITY OF EVENT/TASK LOW, MEDIUM, or HIGH:\n>>>").lower()
+        priority = input("\nIS THE PRIORITY OF EVENT/TASK low, medium, OR high:\n>>>").lower()
+        while priority.lower() in pri_lst:
+            continue
+        else:
+            print("\nPLEASE ENTER EITHER low, medium, OR high as your set priority!")
+
         '''
         if priority.lower() != "low" or "medium" or "high":
             raise Exception("USER DID NOT ENTER high, medium, or low as input!")
