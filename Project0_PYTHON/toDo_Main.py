@@ -138,7 +138,7 @@ def insert_Task() -> toDo_Task:
     while True:
         # Now priorties: LOW, MEDIUM, or HIGH
         priority = input("\nIS THE PRIORITY OF EVENT/TASK low, medium, OR high:\n>>>").lower()
-        while priority.lower() in pri_lst:
+        while priority in pri_lst:
             continue
         else:
             print("\nPLEASE ENTER EITHER low, medium, OR high as your set priority!")
