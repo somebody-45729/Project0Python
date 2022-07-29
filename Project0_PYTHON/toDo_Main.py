@@ -102,10 +102,6 @@ def insert_Task() -> toDo_Task:
         # Enter the MONTH
         try:
             month = int(input("\nENTER MONTH OF EVENT/TASK IN NUMERIC FORM:\n>>>"))
-            while month < 13 and month > 0:
-                continue
-            else:
-                print("\nENTER AN INTEGER FROM 1 TO 12 TO REPRESENT THE MONTH!")
         except ValueError as ve:
             print("\nNOT A PROPER INTEGER, PLEASE TRY AGAIN:\n")
             logging.error("Either entered a string character or a comma. Trying again....")
