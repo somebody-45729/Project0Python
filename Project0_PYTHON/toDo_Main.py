@@ -102,6 +102,10 @@ def insert_Task() -> toDo_Task:
         # Enter the MONTH
         try:
             month = int(input("\nENTER MONTH OF EVENT/TASK IN NUMERIC FORM:\n>>>"))
+            while month < 13 and month > 0:
+                continue
+            else:
+                print("\nENTER AN INTEGER FROM 1 TO 12 TO REPRESENT THE MONTH!")
         except ValueError as ve:
             print("\nNOT A PROPER INTEGER, PLEASE TRY AGAIN:\n")
             logging.error("Either entered a string character or a comma. Trying again....")
@@ -134,14 +138,10 @@ def insert_Task() -> toDo_Task:
         else:
             break
     
-    pri_lst = ["low", "medium", "high"]
+    # pri_lst = ["low", "medium", "high"]
     while True:
         # Now priorties: LOW, MEDIUM, or HIGH
         priority = input("\nIS THE PRIORITY OF EVENT/TASK low, medium, OR high:\n>>>").lower()
-        while priority in pri_lst:
-            continue
-        else:
-            print("\nPLEASE ENTER EITHER low, medium, OR high as your set priority!")
 
         '''
         if priority.lower() != "low" or "medium" or "high":
