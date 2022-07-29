@@ -122,7 +122,7 @@ def insert_Task() -> toDo_Task:
         # Enter the YEAR
         try:
             year = int(input("\nENTER YEAR OF EVENT/TASK IN NUMERIC FORM:\n>>>"))
-            if year < 2100 and year > 1970:
+            while year < 2100 and year > 1970:
                 continue
             else:
                 print("\nENTER 4 DIGIT YEAR FROM 1970 TO 2100")
