@@ -122,12 +122,6 @@ def insert_Task() -> toDo_Task:
         # Enter the YEAR
         try:
             year = int(input("\nENTER YEAR OF EVENT/TASK IN NUMERIC FORM:\n>>>"))
-            while year < 2100 and year > 1970:
-                continue
-            else:
-                print("\nENTER 4 DIGIT YEAR FROM 1970 TO 2100")
-                year = int(input("\nENTER YEAR OF EVENT/TASK IN NUMERIC FORM:\n>>>"))
-   
         except ValueError as ve:
             print("\nNOT A PROPER INTEGER, PLEASE TRY AGAIN:\n")
             logging.error("Either entered a string character or a comma. Trying again....")
